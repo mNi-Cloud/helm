@@ -1,0 +1,32 @@
+{{ $values := .Values }}
+{{- range .Values.components }}
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ .name | quote }}
+  labels:
+    app: {{ .name | quote }}
+spec:
+  replicas: {{ .replicas | default $values.replicas }}
+  selector:
+    matchLabels:
+      app: {{ .name | quote }}
+  template:
+    metadata:
+      labels:
+        app: {{ .name | quote }}
+    spec:
+      containers:
+        - image: {{ .image | quote }}
+          args: {{ toJson .args }}
+          imagePullPolicy: {{ .imagePullPolicy | default "Always"  }}
+          {{- with .env }}
+          env:
+            {{- toYaml . | nindent 12 }}
+          {{- end}}
+          ports:
+            - containerPort: 8080
+      imagePullSecrets:
+        - name: {{ $values.regcred | quote  }}
+{{- end }}
