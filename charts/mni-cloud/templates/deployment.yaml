@@ -17,6 +17,7 @@ spec:
       labels:
         app: {{ .name | quote }}
     spec:
+      serviceAccountName: "mni-cloud"
       containers:
         - name: {{ .name | quote }}
           image: {{ .image | quote }}
