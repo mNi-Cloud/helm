@@ -18,7 +18,8 @@ spec:
         app: {{ .name | quote }}
     spec:
       containers:
-        - image: {{ .image | quote }}
+        - name: {{ .name | quote }}
+          image: {{ .image | quote }}
           args: {{ toJson .args }}
           imagePullPolicy: {{ .imagePullPolicy | default "Always"  }}
           {{- with .env }}
