@@ -31,3 +31,17 @@ components:
       enabled: true
       port: 8081
       type: LoadBalancer
+  - name: mni-bs
+    image: "ghcr.io/mni-cloud/bs:main"
+    args:
+      - "--address"
+      - "0.0.0.0"
+      - "--port"
+      - "8080"
+      - "--vpc-endpoint"
+      - "http://mni-vpc"
+      - "--in-cluster"
+    inbound:
+      enabled: true
+      port: 8082
+      type: LoadBalancer
