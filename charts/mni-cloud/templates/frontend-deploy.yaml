@@ -1,0 +1,33 @@
+{{ $values := .Values }}
+{{- with .Values.frontend }}
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: frontend
+  labels:
+    app: "mni-frontend"
+spec:
+  replicas: {{ .replicas | default $values.replicas }}
+  selector:
+    matchLabels:
+      app: "mni-frontend"
+  template:
+    metadata:
+      labels:
+        app: "mni-frontend"
+    spec:
+      containers:
+        - name: "mni-frontend"
+          image: {{ .image | quote }}
+          args: {{ toJson .args }}
+          imagePullPolicy: {{ .imagePullPolicy | default "Always"  }}
+          {{- with .env }}
+          env:
+            {{- toYaml . | nindent 12 }}
+          {{- end}}
+          ports:
+            - containerPort: {{ .containerPort }}
+      imagePullSecrets:
+        - name: {{ $values.regcred | quote  }}
+{{- end }}

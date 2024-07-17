@@ -1,0 +1,20 @@
+{{- with .Values.frontend }}
+{{ $frontend := . }}
+{{- with .inbound }}
+{{- if .enabled }}
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: "frontend"
+spec:
+  selector:
+    app: "mni-frontend"
+  ports:
+    - protocol: TCP
+      port: {{ .port }}
+      targetPort: {{ $frontend.containerPort  }}
+  type: {{ .type | default "ClusterIP" }}
+{{- end }}
+{{- end }}
+{{- end }}
