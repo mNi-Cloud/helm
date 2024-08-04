@@ -31,6 +31,8 @@ components:
       - "--in-cluster"
       - "--swagger-file"
       - "/v1alpha1.json"
+      - "--bs-endpoint"
+      - "https://mni-bs"
     inbound:
       enabled: true
       port: 8081
