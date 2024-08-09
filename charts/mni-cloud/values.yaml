@@ -58,7 +58,16 @@ frontend:
   replicas: 1
   image: "ghcr.io/mni-cloud/frontend:main"
   args: []
-  env: {}
+  env: {
+    - name: "NEXT_PUBLIC_MNI_VPC_ENDPOINT"
+      value: "http://192.168.115.202:8080",
+    - name: "NEXT_PUBLIC_MNI_VM_ENDPOINT"
+      value: "http://192.168.115.202:8081",
+    - name: "NEXT_PUBLIC_MNI_BS_ENDPOINT"
+      value: "http://192.168.115.202:8082",
+    - name: "NEXT_PUBLIC_MNI_NAMESPACE"
+      value: "munenick"
+  }
   containerPort: 3000
   inbound:
     enabled: true
