@@ -13,8 +13,9 @@ components:
       - "--vm-endpoint"
       - "http://mni-vm"
       - "--in-cluster"
-      - "--swagger-file"
-      - "/v1alpha1.json"
+      - "--swagger-dir"
+      - "/"
+      - "--alpha"
     inbound:
       enabled: true
       port: 8080
@@ -29,10 +30,11 @@ components:
       - "--vpc-endpoint"
       - "http://mni-vpc"
       - "--in-cluster"
-      - "--swagger-file"
-      - "/v1alpha1.json"
+      - "--swagger-dir"
+      - "/"
       - "--bs-endpoint"
       - "https://mni-bs"
+      - "--alpha"
     inbound:
       enabled: true
       port: 8081
@@ -47,8 +49,9 @@ components:
       - "--vpc-endpoint"
       - "http://mni-vpc"
       - "--in-cluster"
-      - "--swagger-file"
-      - "/v1alpha1.json"
+      - "--swagger-dir"
+      - "/"
+      - "--alpha"
     inbound:
       enabled: true
       port: 8082
