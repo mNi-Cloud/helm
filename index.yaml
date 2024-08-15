@@ -3,7 +3,17 @@ entries:
   mni-cloud:
   - apiVersion: v2
     appVersion: 0.0.1
-    created: "2024-08-10T17:15:09.132790379Z"
+    created: "2024-08-15T07:18:43.27163272Z"
+    description: A Helm chart for deploying mni-cloud
+    digest: cd7d037399532e6aea94cc93293d63b69084da71ee3d6fc9bd9be0f329c97854
+    name: mni-cloud
+    type: application
+    urls:
+    - mni-cloud-0.2.0.tgz
+    version: 0.2.0
+  - apiVersion: v2
+    appVersion: 0.0.1
+    created: "2024-08-15T07:18:43.269444191Z"
     description: A Helm chart for deploying mni-cloud
     digest: f6d4a3e649ceb7870644ceb74b4bcccc4603dd8d0fb623e3a9e1857b5bb87b4d
     name: mni-cloud
@@ -13,7 +23,7 @@ entries:
     version: 0.1.16
   - apiVersion: v2
     appVersion: 0.0.1
-    created: "2024-08-10T17:15:09.132468999Z"
+    created: "2024-08-15T07:18:43.269105442Z"
     description: A Helm chart for deploying mni-cloud
     digest: 53e3a0d06dc1a14841c6098be0e405945230147ae5381da8872acbf6017559f9
     name: mni-cloud
@@ -23,7 +33,7 @@ entries:
     version: 0.1.15
   - apiVersion: v2
     appVersion: 0.0.1
-    created: "2024-08-10T17:15:09.132145165Z"
+    created: "2024-08-15T07:18:43.268691122Z"
     description: A Helm chart for deploying mni-cloud
     digest: c87eaa20347b2cb99faedad8be3eeed47cef5d26319b27fb86d9e93d855dd2a2
     name: mni-cloud
@@ -33,7 +43,7 @@ entries:
     version: 0.1.14
   - apiVersion: v2
     appVersion: 0.0.1
-    created: "2024-08-10T17:15:09.131801513Z"
+    created: "2024-08-15T07:18:43.268342857Z"
     description: A Helm chart for deploying mni-cloud
     digest: 5b17c4bded31c47e47c024a5494ba5c26b15cd26fa813df3137a4d3e818267a3
     name: mni-cloud
@@ -43,7 +53,7 @@ entries:
     version: 0.1.13
   - apiVersion: v2
     appVersion: 0.0.1
-    created: "2024-08-10T17:15:09.131465606Z"
+    created: "2024-08-15T07:18:43.267986896Z"
     description: A Helm chart for deploying mni-cloud
     digest: 075fd62911c314b336c36cfcdfeea44261336b84f8d2d17aec069b90d8ec9465
     name: mni-cloud
@@ -53,7 +63,7 @@ entries:
     version: 0.1.12
   - apiVersion: v2
     appVersion: 0.0.1
-    created: "2024-08-10T17:15:09.131052816Z"
+    created: "2024-08-15T07:18:43.267639602Z"
     description: A Helm chart for deploying mni-cloud
     digest: 9a9cf312e792e86d8cf29db6204f1ddfb08edb236a2299bbfd8431b23f6c7e2b
     name: mni-cloud
@@ -63,7 +73,7 @@ entries:
     version: 0.1.10
   - apiVersion: v2
     appVersion: 0.0.1
-    created: "2024-08-10T17:15:09.134686489Z"
+    created: "2024-08-15T07:18:43.271464693Z"
     description: A Helm chart for deploying mni-cloud
     digest: d8d7245e5f4ed90eb4816c8bae72c81fb63d01a98d4e35684f49d3f55e6d6dc9
     name: mni-cloud
@@ -73,7 +83,7 @@ entries:
     version: 0.1.9
   - apiVersion: v2
     appVersion: 0.0.1
-    created: "2024-08-10T17:15:09.134323952Z"
+    created: "2024-08-15T07:18:43.271185237Z"
     description: A Helm chart for deploying mni-cloud
     digest: 66380fe93d0822e01155538433ab504d67b49d96f026dad3ddff2ffbf7ea0f4e
     name: mni-cloud
@@ -83,7 +93,7 @@ entries:
     version: 0.1.8
   - apiVersion: v2
     appVersion: 0.0.1
-    created: "2024-08-10T17:15:09.13405532Z"
+    created: "2024-08-15T07:18:43.270904428Z"
     description: A Helm chart for deploying mni-cloud
     digest: b21ff640455fd43e472facf87905b9dd73f746cca5a105104008335c47549872
     name: mni-cloud
@@ -93,7 +103,7 @@ entries:
     version: 0.1.7
   - apiVersion: v2
     appVersion: 0.0.1
-    created: "2024-08-10T17:15:09.133818017Z"
+    created: "2024-08-15T07:18:43.270618201Z"
     description: A Helm chart for deploying mni-cloud
     digest: bf86f0741790ef50cdb137d03b67c09a87c4fb8d93533c0745bd9c0ec411e268
     name: mni-cloud
@@ -103,7 +113,7 @@ entries:
     version: 0.1.6
   - apiVersion: v2
     appVersion: 0.0.1
-    created: "2024-08-10T17:15:09.133607294Z"
+    created: "2024-08-15T07:18:43.270177311Z"
     description: A Helm chart for deploying mni-cloud
     digest: 81cda2d74c7552be4883a9281a2af9d7eddbbd8c508ee0acde30a8b1d56d2d19
     name: mni-cloud
@@ -113,7 +123,7 @@ entries:
     version: 0.1.5
   - apiVersion: v2
     appVersion: 0.0.1
-    created: "2024-08-10T17:15:09.13323Z"
+    created: "2024-08-15T07:18:43.269961785Z"
     description: A Helm chart for deploying mni-cloud
     digest: 8245d6056aa7dce32ba44a3c025b148ccc5ae859740776b8f960dd65ea3e5858
     name: mni-cloud
@@ -123,7 +133,7 @@ entries:
     version: 0.1.4
   - apiVersion: v2
     appVersion: 0.0.1
-    created: "2024-08-10T17:15:09.133017062Z"
+    created: "2024-08-15T07:18:43.269690094Z"
     description: A Helm chart for deploying mni-cloud
     digest: e88b3d9221047528eecbe31928b0d19b59b49c71b0d22ebb41f8641917d84da3
     name: mni-cloud
@@ -131,4 +141,4 @@ entries:
     urls:
     - mni-cloud-0.1.3.tgz
     version: 0.1.3
-generated: "2024-08-10T17:15:09.130504703Z"
+generated: "2024-08-15T07:18:43.267103953Z"
