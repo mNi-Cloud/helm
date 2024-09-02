@@ -4,8 +4,6 @@ on:
   push:
     branches:
       - main
-    paths:
-      - "**Chart.yaml"
 
 jobs:
   release:
@@ -14,7 +12,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
         with:
           fetch-depth: 0
 
@@ -22,35 +20,10 @@ jobs:
         run: |
           git config user.name "$GITHUB_ACTOR"
           git config user.email "$GITHUB_ACTOR@users.noreply.github.com"
-
       - name: Install Helm
-        uses: azure/setup-helm@v1
-        with:
-          version: v3.5.4
+        uses: azure/setup-helm@v3
 
-      - name: Get changed files
-        id: files
-        uses: jitterbit/get-changed-files@v1
-        with:
-          format: 'csv'
-
-      - name: Push archives and index
-        shell: bash
-        run: |
-          echo ${{ steps.files.outputs.added_modified }}
-          mapfile -d ',' -t added_modified_files < <(printf '%s,' '${{ steps.files.outputs.added_modified }}')
-          for added_modified_file in "${added_modified_files[@]}"; do
-            if [[ ${added_modified_file} == *Chart.yaml ]]; then
-              echo ${added_modified_file} | sed -e 's/Chart.yaml//' | xargs helm package -d .package
-            fi
-          done
-          if [[ -n $(ls .package) ]]; then
-            git switch charts
-            mv .package/* ./
-            helm repo index .
-            git add -Av
-            git commit -m "update charts"
-            git push origin charts
-          else
-            echo "Nothing to do."
-          fi
+      - name: Run chart-releaser
+        uses: helm/chart-releaser-action@v1.5.0
+        env:
+          CR_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
