@@ -3,6 +3,16 @@ entries:
   mni-cloud:
   - apiVersion: v2
     appVersion: 0.0.1
+    created: "2024-12-11T18:35:27.81345221Z"
+    description: A Helm chart for deploying mni-cloud
+    digest: 5cb51e1e8c007fd5c7829c8348e3d54bab70a0b7e3983d1e5ec48606f283a5b1
+    name: mni-cloud
+    type: application
+    urls:
+    - https://github.com/mNi-Cloud/helm/releases/download/mni-cloud-0.2.4/mni-cloud-0.2.4.tgz
+    version: 0.2.4
+  - apiVersion: v2
+    appVersion: 0.0.1
     created: "2024-12-11T18:08:18.255929867Z"
     description: A Helm chart for deploying mni-cloud
     digest: 5bb436ad2105eebfedb72a76b869c37711c9346c44d86cf528e0beccc4a305d2
@@ -31,4 +41,4 @@ entries:
     urls:
     - https://github.com/mNi-Cloud/helm/releases/download/mni-cloud-0.2.1/mni-cloud-0.2.1.tgz
     version: 0.2.1
-generated: "2024-12-11T18:08:18.2559423Z"
+generated: "2024-12-11T18:35:27.813469442Z"
