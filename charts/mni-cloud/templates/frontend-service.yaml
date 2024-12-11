@@ -1,4 +1,4 @@
-{{- with .Values.frontend }}
+{{- range .Values.frontends }}
 {{ $frontend := . }}
 {{- with .inbound }}
 {{- if .enabled }}

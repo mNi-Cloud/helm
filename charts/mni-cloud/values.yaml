@@ -4,4 +4,4 @@ replicas: 0
 
 components: []
 
-frontend: {}
+frontends: []

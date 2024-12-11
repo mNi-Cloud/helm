@@ -1,24 +1,24 @@
 {{ $values := .Values }}
-{{- with .Values.frontend }}
+{{- range .Values.frontends }}
 ---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: frontend
+  name: {{ .name | quote }}
   labels:
-    app: "mni-frontend"
+    app: {{ .name | quote }}
 spec:
   replicas: {{ .replicas | default $values.replicas }}
   selector:
     matchLabels:
-      app: "mni-frontend"
+      app: {{ .name | quote }}
   template:
     metadata:
       labels:
-        app: "mni-frontend"
+        app: {{ .name | quote }}
     spec:
       containers:
-        - name: "mni-frontend"
+        - name: {{ .name | quote }}
           image: {{ .image | quote }}
           args: {{ toJson .args }}
           imagePullPolicy: {{ .imagePullPolicy | default "Always"  }}
