@@ -1,20 +1,14 @@
 {{- range .Values.frontends }}
-{{ $frontend := . }}
-{{- with .inbound }}
-{{- if .enabled }}
 ---
 apiVersion: v1
 kind: Service
 metadata:
-  name: "frontend"
+  name: {{ .name | quote }}
 spec:
   selector:
-    app: "mni-frontend"
+    app: {{ .name | quote }}
   ports:
     - protocol: TCP
-      port: {{ .port }}
-      targetPort: {{ $frontend.containerPort  }}
-  type: {{ .type | default "ClusterIP" }}
-{{- end }}
-{{- end }}
+      port: 80
+      targetPort: 3000
 {{- end }}
